@@ -1,0 +1,40 @@
+# 旧版本文件
+gymsanrio_deploy.html
+健身房视频运营工作台_三丽鸥版.html
+健身房视频运营工作台_部署版.html
+
+# 临时输出文件
+*_每日文案.html
+*_爆款视频日报.html
+daily-content-output.txt
+口播脚本_爆款仿写3条.txt
+
+# 报告文档
+工作台优化建议报告.html
+竞品功能对比分析报告.html
+部署说明.txt
+部署说明_三丽鸥版.txt
+执行步骤总结.txt
+
+# 资源文件（体积大，不纳入版本控制）
+assets/
+
+# TRAE 内部打包
+.trae-html-share-packages/
+execution-summary/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 临时文件
+*.tmp
+*.bak
+*.log
