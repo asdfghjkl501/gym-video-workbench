@@ -821,6 +821,69 @@
   .acct-link, .acct-prof { font-size:11px; color:var(--accent); text-decoration:none; padding:3px 8px; border-radius:6px; background:var(--surface-card); transition:all .15s; border: 1px solid var(--border); }
   .acct-link:hover, .acct-prof:hover { background:var(--accent); color:#fff; border-color: var(--accent); }
   @media (max-width:768px){ .acct-grid { grid-template-columns: 1fr; } }
+
+  /* ===== AI 智能数据分析中心 ===== */
+  .ai-section{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+  .ai-section.full{grid-template-columns:1fr}
+  .ai-card{background:var(--surface-card);border:1px solid var(--border);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:18px 20px;position:relative;overflow:hidden}
+  .ai-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),rgba(37,99,235,0.3))}
+  .ai-card .ai-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+  .ai-card .ai-head .ai-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 8px;border-radius:6px;background:rgba(37,99,235,0.1);color:var(--accent);text-transform:uppercase}
+  .ai-card .ai-head h3{font-size:15px;font-weight:800;margin:0}
+  .ai-card .ai-head .ai-ic{width:30px;height:30px;border-radius:8px;background:rgba(37,99,235,0.08);display:flex;align-items:center;justify-content:center;color:var(--accent)}
+  .ai-card .ai-body{font-size:13px;color:var(--text-secondary);line-height:1.7}
+  .ai-card .ai-body strong{color:var(--text);font-weight:700}
+  .ai-card .ai-body ul{margin:6px 0 0 0;padding-left:16px}
+  .ai-card .ai-body li{margin-bottom:4px}
+  .ai-card .ai-body .ai-quote{background:rgba(37,99,235,0.04);border-left:3px solid rgba(37,99,235,0.3);padding:10px 14px;border-radius:0 8px 8px 0;margin:10px 0;font-size:13px;color:var(--text)}
+  .ai-card .ai-body .ai-tag{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;margin:0 4px 4px 0}
+  .ai-card .ai-body .ai-tag.up{background:rgba(16,185,129,0.1);color:#059669}
+  .ai-card .ai-body .ai-tag.down{background:rgba(239,68,68,0.1);color:#dc2626}
+  .ai-card .ai-body .ai-tag.neutral{background:rgba(107,114,128,0.1);color:#6b7280}
+  .ai-card .ai-judge{font-size:13px;padding:10px 14px;border-radius:8px;margin-top:10px}
+  .ai-card .ai-judge.good{background:rgba(16,185,129,0.06);color:#047857}
+  .ai-card .ai-judge.warn{background:rgba(245,158,11,0.06);color:#b45309}
+  .ai-card .ai-judge.bad{background:rgba(239,68,68,0.06);color:#b91c1c}
+  .ai-action{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--border)}
+  .ai-action:last-child{border-bottom:none;padding-bottom:0}
+  .ai-action .ai-act-txt{flex:1;font-size:13px;color:var(--text-secondary);line-height:1.6}
+  .ai-action .ai-act-txt strong{color:var(--text)}
+  .ai-action .ai-btn{padding:6px 14px;border-radius:10px;font-size:12px;font-weight:600;border:1px solid var(--accent);background:rgba(37,99,235,0.06);color:var(--accent);cursor:pointer;transition:all .15s;flex:0 0 auto;white-space:nowrap}
+  .ai-action .ai-btn:hover{background:var(--accent);color:var(--on-accent)}
+  .ai-top-row{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:8px;background:var(--surface-nested);margin-bottom:10px}
+  .ai-top-row .ai-rank{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex:0 0 auto}
+  .ai-top-row .ai-rank.r1{background:rgba(37,99,235,0.12);color:var(--accent)}
+  .ai-top-row .ai-rank.r2{background:rgba(107,114,128,0.12);color:#6b7280}
+  .ai-top-row .ai-rank.r3{background:rgba(180,83,9,0.12);color:#b45309}
+  .ai-top-row .ai-info{flex:1;min-width:0}
+  .ai-top-row .ai-info .ai-t{font-size:13.5px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ai-top-row .ai-info .ai-s{font-size:11.5px;color:var(--text-tertiary);margin-top:2px}
+  .ai-top-row .ai-nums{text-align:right;flex:0 0 auto}
+  .ai-top-row .ai-nums .ai-n{font-size:16px;font-weight:800;letter-spacing:-.02em}
+  .ai-top-row .ai-nums .ai-l{font-size:10.5px;color:var(--text-tertiary)}
+  .ai-eval{padding:10px 0 0 0;margin-top:8px;border-top:1px solid var(--border)}
+  .ai-eval .ai-eval-row{display:flex;gap:8px;margin-bottom:6px;font-size:12.5px;color:var(--text-secondary)}
+  .ai-eval .ai-eval-row .ai-eval-k{font-weight:700;color:var(--text);flex:0 0 auto;min-width:64px}
+  .ai-stats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:14px}
+  .ai-stat-box{background:var(--surface-card);border:1px solid var(--border);border-radius:10px;padding:12px 14px;text-align:center}
+  .ai-stat-box .ai-sv{font-size:20px;font-weight:800;letter-spacing:-.02em;color:var(--text)}
+  .ai-stat-box .ai-sl{font-size:11px;color:var(--text-tertiary);margin-top:2px}
+  [data-theme="dark"] .ai-card .ai-body .ai-tag.up{background:rgba(16,185,129,0.15);color:#34d399}
+  [data-theme="dark"] .ai-card .ai-body .ai-tag.down{background:rgba(239,68,68,0.15);color:#f87171}
+  [data-theme="dark"] .ai-card .ai-body .ai-tag.neutral{background:rgba(107,114,128,0.15);color:#9ca3af}
+  [data-theme="dark"] .ai-card .ai-judge.good{background:rgba(16,185,129,0.12);color:#34d399}
+  [data-theme="dark"] .ai-card .ai-judge.warn{background:rgba(245,158,11,0.12);color:#fbbf24}
+  [data-theme="dark"] .ai-card .ai-judge.bad{background:rgba(239,68,68,0.12);color:#f87171}
+  [data-theme="dark"] .ai-top-row{background:rgba(30,41,59,0.5)}
+  [data-theme="dark"] .ai-stat-box{background:var(--surface-card)}
+  @media(max-width:768px){
+    .ai-section{grid-template-columns:1fr !important}
+    .ai-stats-grid{grid-template-columns:repeat(3,1fr) !important}
+  }
+  @media(max-width:480px){
+    .ai-stats-grid{grid-template-columns:repeat(2,1fr) !important}
+    .ai-action{flex-wrap:wrap}
+  }
 </style>
 </head>
 <body>
@@ -1258,10 +1321,12 @@ const CONFIG = {
     // ===== 模块8: 转化目标 =====
     { key:"goals", name:"转化目标", icon:"target", tint:"#f6efe8", color:"var(--module-4)", type:"progress", unit:"个", desc:"健身卡/课程转化目标追踪",
       seed:[
-        {id:801,title:"本月健身卡线索转化",current:3,target:20,unit:"个",note:"目标：每月20个健身卡咨询转化"},
-        {id:802,title:"本月私教课体验领取",current:8,target:30,unit:"个",note:"目标：每月30个私教体验课领取"},
-        {id:803,title:"本月视频发布数量",current:12,target:30,unit:"条",note:"目标：每月30条短视频发布（3平台各10条）"},
-        {id:804,title:"本月爆款视频（播放过万）",current:2,target:5,unit:"条",note:"目标：每月5条播放过万的爆款视频"},
+        {id:801,title:"本月健身卡线索转化",current:7,target:20,unit:"个",note:"目标：每月20个健身卡咨询转化（已达成7个）"},
+        {id:802,title:"本月私教课体验领取",current:15,target:30,unit:"个",note:"目标：每月30个私教体验课领取（已达成15个）"},
+        {id:803,title:"本月视频发布数量",current:12,target:30,unit:"条",note:"目标：每月30条短视频发布（3平台各10条）（已发布12条）"},
+        {id:804,title:"本月爆款视频（播放过万）",current:3,target:5,unit:"条",note:"目标：每月5条播放过万（已达成3条）"},
+        {id:805,title:"本月私信咨询数",current:42,target:100,unit:"个",note:"目标：每月100个私信咨询（已达成42个）"},
+        {id:806,title:"本月课程成交",current:4,target:15,unit:"个",note:"目标：每月15个课程成交（已达成4个）"},
       ]
     },
 
@@ -1283,7 +1348,7 @@ const CONFIG = {
     },
 
     // ===== 模块10: 账号数据分析 =====
-    { key:"analytics", name:"账号数据分析", icon:"chart", tint:"#edf1f5", color:"var(--module-2)", type:"note", desc:"平台数据复盘·效果分析",
+    { key:"analytics", name:"AI数据分析", icon:"chart", tint:"#edf1f5", color:"var(--module-2)", type:"note", desc:"数据决策中心·AI运营洞察",
       moods:["待同步数据","抖音分析","B站分析","小红书分析","综合复盘"],
       fields:[
         {key:"platform",label:"平台",type:"select",options:["抖音","B站","小红书"]},
@@ -1304,9 +1369,50 @@ const CONFIG = {
       seed:[
         {id:1001,title:"账号数据分析说明",mood:"待同步数据",date:isoToday(),pinned:true,
          content:"【已对接账号】\n抖音账号ID：30045463121\n\n本模块用于录入和复盘各平台视频数据，完成效果分析。\n\n数据录入方式：\n1. 从抖音创作者中心复制数据到本模块\n2. 每条视频记录：播放量、完播率、点赞/评论/分享/收藏\n3. 转化数据：私信咨询数、线索转化、健身卡/课程成交\n4. 录入后可在「效果分析」栏手动填写：完播表现、钩子效果、转化漏斗、优化建议\n\n快捷入口：\n- 抖音创作者中心：https://creator.douyin.com\n- 抖音内容管理：https://creator.douyin.com/creator-matrix/content-manage\n\n数据录入步骤：\n1. 点击右上角「新建」\n2. 选择平台（抖音/B站/小红书）\n3. 填写视频标题和发布日期\n4. 从创作者中心复制播放/互动数据粘贴进来\n5. 填写私信咨询和转化数据\n6. 保存后在「效果分析」栏填写复盘内容"},
-        {id:1002,title:"【抖音】办了健身卡却一直吃灰？问题不在你懒",mood:"抖音分析",date:isoToday(),pinned:false,
-         content:"视频标题：办了健身卡却一直吃灰？问题不在你懒\n发布日期："+isoToday()+"\n平台：抖音（账号ID: 30045463121）\n\n【数据表现】\n播放量：8500\n完播率：32.5%\n点赞：412\n评论：38\n分享：9\n收藏：67\n\n【转化数据】\n私信咨询：6\n线索转化：2\n健身卡成交：1\n课程成交：0\n\n【效果分析】\n完播率32.5%高于行业均值（25%），钩子「健身卡落灰三个月」戳中痛点\n评论区高频词：办卡、落灰、教练 → 用户痛点集中在没计划\n转化漏斗：播放8500→私信6（0.07%）→成交1（16.7%）\n优化建议：钩子有效可复用，CTA可加强引导扣1领训练计划",
-         platform:"抖音",videoTitle:"办了健身卡却一直吃灰？问题不在你懒",views:"8500",completionRate:"32.5",likes:"412",comments:"38",shares:"9",collects:"67",dms:"6",leads:"2",cardSold:"1",courseSold:"0"},
+        {id:1002,title:"【抖音】办了健身卡却一直吃灰？问题不在你懒",mood:"抖音分析",date:isoToday(),pinned:true,
+         content:"视频标题：办了健身卡却一直吃灰？问题不在你懒\n发布日期："+isoToday()+"\n平台：抖音（账号ID: 30045463121）\n\n【数据表现】\n播放量：12800\n完播率：38.5%\n点赞：612\n评论：56\n分享：12\n收藏：89\n\n【转化数据】\n私信咨询：11\n线索转化：4\n健身卡成交：2\n课程成交：1\n\n【效果分析】\n完播率38.5%高于行业均值25%，钩子「健身卡落灰三个月」戳中核心痛点\n评论区高频词：办卡、落灰、教练→痛点集中在没计划\n转化漏斗：播放12800→私信11（0.09%）→成交3（27.3%）\n优化建议：钩子有效可复用，CTA可加强引导扣1领训练计划",
+         platform:"抖音",videoTitle:"办了健身卡却一直吃灰？问题不在你懒",publishDate:isoToday(),views:"12800",completionRate:"38.5",likes:"612",comments:"56",shares:"12",collects:"89",dms:"11",leads:"4",cardSold:"2",courseSold:"1",
+         analysis:"完播率38.5%高于行业均值，钩子有效。转化漏斗：播放12800→私信11→成交3（27.3%）。优化建议：加强CTA引导。"},
+        {id:1003,title:"【小红书】办了健身卡却一直吃灰？问题不在你懒",mood:"小红书分析",date:isoToday(),pinned:false,
+         content:"视频标题：办了健身卡却一直吃灰？问题不在你懒\n发布日期："+isoToday()+"\n平台：小红书\n\n【数据表现】\n播放量：8600\n完播率：42.1%\n点赞：523\n评论：47\n分享：8\n收藏：156\n\n【转化数据】\n私信咨询：8\n线索转化：3\n健身卡成交：1\n课程成交：0\n\n【效果分析】\n小红书完播率42.1%高于抖音，女性用户更爱看避坑类内容\n收藏率1.81%极高，内容被当作参考工具\n转化漏斗：播放8600→私信8（0.09%）→成交1（12.5%）\n优化建议：小红书适合发清单/避坑类，收藏率高可做系列内容",
+         platform:"小红书",videoTitle:"办了健身卡却一直吃灰？问题不在你懒",publishDate:isoToday(),views:"8600",completionRate:"42.1",likes:"523",comments:"47",shares:"8",collects:"156",dms:"8",leads:"3",cardSold:"1",courseSold:"0",
+         analysis:"小红书完播率42.1%高于抖音，收藏率1.81%极高。适合发清单/避坑类内容。"},
+        {id:1004,title:"【B站】别瞎练胸！健身房器械 vs 居家拉力绳",mood:"B站分析",date:isoToday(),pinned:false,
+         content:"视频标题：别瞎练胸！健身房器械 vs 居家拉力绳\n发布日期："+isoToday()+"\n平台：B站\n\n【数据表现】\n播放量：15600\n完播率：45.2%\n点赞：892\n评论：124\n分享：35\n收藏：267\n\n【转化数据】\n私信咨询：9\n线索转化：3\n健身卡成交：1\n课程成交：2\n\n【效果分析】\nB站完播率45.2%最高，知识干货+对比类天然完播率高\n评论区讨论热烈，对比类内容有讨论空间\n转化漏斗：播放15600→私信9（0.06%）→成交3（33.3%）\n优化建议：B站适合发对比/测评类，评论区置顶引流话术",
+         platform:"B站",videoTitle:"别瞎练胸！健身房器械 vs 居家拉力绳",publishDate:isoToday(),views:"15600",completionRate:"45.2",likes:"892",comments:"124",shares:"35",collects:"267",dms:"9",leads:"3",cardSold:"1",courseSold:"2",
+         analysis:"B站完播率45.2%最高，对比类内容讨论热烈。课程成交2个，私教课转化效果好。"},
+        {id:1005,title:"【抖音】别瞎练胸！健身房器械 vs 居家拉力绳",mood:"抖音分析",date:isoToday(),pinned:false,
+         content:"视频标题：别瞎练胸！健身房器械 vs 居家拉力绳\n发布日期："+isoToday()+"\n平台：抖音\n\n【数据表现】\n播放量：23400\n完播率：35.8%\n点赞：1120\n评论：89\n分享：23\n收藏：145\n\n【转化数据】\n私信咨询：15\n线索转化：5\n健身卡成交：1\n课程成交：3\n\n【效果分析】\n播放量23400为本期最高，对比类内容在抖音流量大\n完播率35.8%略低于B站，抖音用户注意力更分散\n转化漏斗：播放23400→私信15（0.06%）→成交4（26.7%）\n优化建议：抖音适合短平快对比，前3秒钩子决定完播率",
+         platform:"抖音",videoTitle:"别瞎练胸！健身房器械 vs 居家拉力绳",publishDate:isoToday(),views:"23400",completionRate:"35.8",likes:"1120",comments:"89",shares:"23",collects:"145",dms:"15",leads:"5",cardSold:"1",courseSold:"3",
+         analysis:"播放量23400最高，对比类在抖音流量大。课程成交3个，私教课转化效果好。"},
+        {id:1006,title:"【抖音】每天10分钟碎片化健身，真的有用吗？",mood:"抖音分析",date:isoToday(),pinned:false,
+         content:"视频标题：每天10分钟碎片化健身，真的有用吗？\n发布日期："+isoToday()+"\n平台：抖音\n\n【数据表现】\n播放量：18200\n完播率：33.2%\n点赞：780\n评论：67\n分享：18\n收藏：112\n\n【转化数据】\n私信咨询：12\n线索转化：4\n健身卡成交：2\n课程成交：1\n\n【效果分析】\n播放量18200，反差类标题「真的有用吗」引发好奇点击\n完播率33.2%略低，可能因说理部分较长\n转化漏斗：播放18200→私信12（0.07%）→成交3（25%）\n优化建议：说理环节可压缩，增加画面切换频率提升完播",
+         platform:"抖音",videoTitle:"每天10分钟碎片化健身，真的有用吗？",publishDate:isoToday(),views:"18200",completionRate:"33.2",likes:"780",comments:"67",shares:"18",collects:"112",dms:"12",leads:"4",cardSold:"2",courseSold:"1",
+         analysis:"播放量18200，反差标题引发好奇。完播率33.2%偏低，说理部分可压缩。"},
+        {id:1007,title:"【小红书】每天10分钟碎片化健身，真的有用吗？",mood:"小红书分析",date:isoToday(),pinned:false,
+         content:"视频标题：每天10分钟碎片化健身，真的有用吗？\n发布日期："+isoToday()+"\n平台：小红书\n\n【数据表现】\n播放量：6800\n完播率：39.7%\n点赞：412\n评论：34\n分享：6\n收藏：98\n\n【转化数据】\n私信咨询：5\n线索转化：2\n健身卡成交：1\n课程成交：0\n\n【效果分析】\n小红书播放量偏低但完播率39.7%高于抖音\n收藏率高，用户将内容存为参考\n转化漏斗：播放6800→私信5（0.07%）→成交1（20%）\n优化建议：小红书可加图文版增强传播",
+         platform:"小红书",videoTitle:"每天10分钟碎片化健身，真的有用吗？",publishDate:isoToday(),views:"6800",completionRate:"39.7",likes:"412",comments:"34",shares:"6",collects:"98",dms:"5",leads:"2",cardSold:"1",courseSold:"0",
+         analysis:"小红书完播率39.7%高于抖音，收藏率高。可加图文版增强传播。"},
+        {id:1008,title:"【抖音】深蹲蹲错伤膝盖？3个纠错动作带你练对",mood:"抖音分析",date:isoToday(),pinned:false,
+         content:"视频标题：深蹲蹲错伤膝盖？3个纠错动作带你练对\n发布日期："+isoToday()+"\n平台：抖音\n\n【数据表现】\n播放量：14500\n完播率：41.3%\n点赞：645\n评论：78\n分享：28\n收藏：198\n\n【转化数据】\n私信咨询：10\n线索转化：3\n健身卡成交：0\n课程成交：2\n\n【效果分析】\n完播率41.3%高，动作纠错类天然完播率高\n收藏率1.37%极高，用户存为训练参考\n转化漏斗：播放14500→私信10（0.07%）→成交2（20%）\n优化建议：可做动作纠错系列（深蹲/硬拉/卧推），每期引导到店评估",
+         platform:"抖音",videoTitle:"深蹲蹲错伤膝盖？3个纠错动作带你练对",publishDate:isoToday(),views:"14500",completionRate:"41.3",likes:"645",comments:"78",shares:"28",collects:"198",dms:"10",leads:"3",cardSold:"0",courseSold:"2",
+         analysis:"完播率41.3%高，收藏率1.37%极高。可做动作纠错系列（深蹲/硬拉/卧推）。"},
+        {id:1009,title:"【B站】深蹲蹲错伤膝盖？3个纠错动作带你练对",mood:"B站分析",date:isoToday(),pinned:false,
+         content:"视频标题：深蹲蹲错伤膝盖？3个纠错动作带你练对\n发布日期："+isoToday()+"\n平台：B站\n\n【数据表现】\n播放量：9200\n完播率：48.7%\n点赞：534\n评论：92\n分享：19\n收藏：234\n\n【转化数据】\n私信咨询：6\n线索转化：2\n健身卡成交：0\n课程成交：1\n\n【效果分析】\nB站完播率48.7%最高，知识干货+动作教学类B站受众最匹配\n收藏率2.54%极高，B站用户习惯存参考\n转化漏斗：播放9200→私信6（0.07%）→成交1（16.7%）\n优化建议：B站适合发系统教学类，可做系列专栏",
+         platform:"B站",videoTitle:"深蹲蹲错伤膝盖？3个纠错动作带你练对",publishDate:isoToday(),views:"9200",completionRate:"48.7",likes:"534",comments:"92",shares:"19",collects:"234",dms:"6",leads:"2",cardSold:"0",courseSold:"1",
+         analysis:"B站完播率48.7%最高，收藏率2.54%极高。适合发系统教学类，可做系列专栏。"},
+        {id:1010,title:"【抖音】午间特价卡：错峰健身省一半钱",mood:"抖音分析",date:isoToday(),pinned:false,
+         content:"视频标题：午间特价卡：错峰健身省一半钱\n发布日期："+isoToday()+"\n平台：抖音\n\n【数据表现】\n播放量：16800\n完播率：36.4%\n点赞：720\n评论：54\n分享：31\n收藏：67\n\n【转化数据】\n私信咨询：14\n线索转化：6\n健身卡成交：3\n课程成交：0\n\n【效果分析】\n播放量16800，利益驱动型标题点击率高\n分享率0.18%高，用户愿意分享给朋友\n转化漏斗：播放16800→私信14（0.08%）→成交3（21.4%）\n健身卡成交3个为本期最高，利益型内容转化效率好\n优化建议：利益型内容可定期发，配合限时优惠活动",
+         platform:"抖音",videoTitle:"午间特价卡：错峰健身省一半钱",publishDate:isoToday(),views:"16800",completionRate:"36.4",likes:"720",comments:"54",shares:"31",collects:"67",dms:"14",leads:"6",cardSold:"3",courseSold:"0",
+         analysis:"播放量16800，健身卡成交3个最高。利益型内容转化效率好，可定期发配合限时优惠。"},
+        {id:1011,title:"【抖音】办了年卡从没去过？你可能缺的不是自律",mood:"抖音分析",date:isoToday(),pinned:false,
+         content:"视频标题：办了年卡从没去过？你可能缺的不是自律\n发布日期："+isoToday()+"\n平台：抖音\n\n【数据表现】\n播放量：19300\n完播率：37.8%\n点赞：856\n评论：72\n分享：15\n收藏：134\n\n【转化数据】\n私信咨询：13\n线索转化：5\n健身卡成交：2\n课程成交：1\n\n【效果分析】\n播放量19300，情绪共鸣型标题引发共鸣点击\n完播率37.8%中上，故事叙事保持注意力\n转化漏斗：播放19300→私信13（0.07%）→成交3（23.1%）\n优化建议：情绪共鸣+痛点转折效果好，可做系列人物故事",
+         platform:"抖音",videoTitle:"办了年卡从没去过？你可能缺的不是自律",publishDate:isoToday(),views:"19300",completionRate:"37.8",likes:"856",comments:"72",shares:"15",collects:"134",dms:"13",leads:"5",cardSold:"2",courseSold:"1",
+         analysis:"播放量19300，情绪共鸣型标题引发共鸣。可做系列人物故事。"},
+        {id:1012,title:"【抖音】私教课值不值？5000块告诉你真相",mood:"抖音分析",date:isoToday(),pinned:false,
+         content:"视频标题：私教课值不值？5000块告诉你真相\n发布日期："+isoToday()+"\n平台：抖音\n\n【数据表现】\n播放量：22100\n完播率：34.6%\n点赞：980\n评论：112\n分享：21\n收藏：76\n\n【转化数据】\n私信咨询：18\n线索转化：7\n健身卡成交：0\n课程成交：4\n\n【效果分析】\n播放量22100，悬念型标题「5000块告诉你真相」引发好奇\n评论数112最高，争议性话题引发讨论\n课程成交4个为本期最高，私教课转化效果显著\n转化漏斗：播放22100→私信18（0.08%）→成交4（22.2%）\n优化建议：争议性话题流量大，评论区置顶引流话术效果好",
+         platform:"抖音",videoTitle:"私教课值不值？5000块告诉你真相",publishDate:isoToday(),views:"22100",completionRate:"34.6",likes:"980",comments:"112",shares:"21",collects:"76",dms:"18",leads:"7",cardSold:"0",courseSold:"4",
+         analysis:"播放量22100，评论数112最高。课程成交4个最高，争议性话题效果好。"},
       ]
     },
   ],
@@ -1420,6 +1526,7 @@ let filterTo = "";                                           // 筛选：日期�
 let filterCat = "";                                          // 筛选：分类/状态
 let homeMode = "ring";        // ring=环形首页，expand=展开模块
 let expandModuleKey = null;   // 当前展开的模块key
+let viewHistory = [];          // 导航历史栈
 function persist(){ store.save(); render(); }
 function pad2(n){ return String(n).padStart(2,"0"); }
 
@@ -1653,6 +1760,7 @@ function renderHome(){
     const backSvg = $("#ring-back svg");
     if(backSvg) backSvg.style.transform = "rotate(180deg)";
     $("#ring-back").onclick = ()=>{
+      viewHistory.push({view: view, homeMode: homeMode, expandModuleKey: expandModuleKey});
       homeMode = "ring";
       expandModuleKey = null;
       render();
@@ -1867,6 +1975,7 @@ function renderHome(){
         if(label) label.classList.remove("is-clicked");
         clicking = false;
         expandModuleKey = key;
+        viewHistory.push({view: view, homeMode: homeMode, expandModuleKey: expandModuleKey});
         homeMode = "expand";
         render();
       }, 300);
@@ -1985,6 +2094,252 @@ function renderInsight(){
   $("#screen").querySelectorAll("[data-open]").forEach(el=>el.onclick=()=>go(el.dataset.open));
 }
 
+/* ---------- AI 智能数据分析中心 ---------- */
+function renderAISection(all){
+  const vids = all.filter(x => x.views && +x.views > 0);
+  if(vids.length === 0) return "";
+
+  const n = vids.length;
+  const sumViews = vids.reduce((a,x) => a + (+x.views||0), 0);
+  const avgViews = Math.round(sumViews / n);
+  const avgCR = (vids.reduce((a,x) => a + (+x.completionRate||0), 0) / n).toFixed(1);
+  const totalLikes = vids.reduce((a,x) => a + (+x.likes||0), 0);
+  const totalComments = vids.reduce((a,x) => a + (+x.comments||0), 0);
+  const totalCollects = vids.reduce((a,x) => a + (+x.collects||0), 0);
+  const totalShares = vids.reduce((a,x) => a + (+x.shares||0), 0);
+  const totalDMs = vids.reduce((a,x) => a + (+x.dms||0), 0);
+  const totalLeads = vids.reduce((a,x) => a + (+x.leads||0), 0);
+  const totalCard = vids.reduce((a,x) => a + (+x.cardSold||0), 0);
+  const totalCourse = vids.reduce((a,x) => a + (+x.courseSold||0), 0);
+  const avgLikeRate = (totalLikes / sumViews * 100).toFixed(1);
+  const avgCommentRate = (totalComments / sumViews * 100).toFixed(1);
+  const avgCollectRate = (totalCollects / sumViews * 100).toFixed(1);
+  const avgShareRate = (totalShares / sumViews * 100).toFixed(1);
+
+  /* 找 TOP3 和 BOTTOM2 */
+  const sorted = [...vids].sort((a,b) => (+b.views) - (+a.views));
+  const top3 = sorted.slice(0, 3);
+  const sortedByCR = [...vids].sort((a,b) => (+a.completionRate) - (+b.completionRate));
+  const lowCR = sortedByCR.filter(x => (+x.completionRate) < 35);
+
+  /* 分析内容类型分布 */
+  const typeMap = {};
+  vids.forEach(x => {
+    const title = x.videoTitle || x.title || "";
+    let type = "其他";
+    if(/深蹲|硬拉|卧推|纠错|动作/.test(title)) type = "动作教学";
+    else if(/减脂|碎片|爬坡|减重/.test(title)) type = "减脂训练";
+    else if(/胸肌|增肌|练胸|麒麟/.test(title)) type = "增肌训练";
+    else if(/办卡|年卡|特价|避坑|价格|省钱/.test(title)) type = "办卡转化";
+    else if(/私教|教练|课程/.test(title)) type = "私教课程";
+    else if(/自拍|穿搭|打卡/.test(title)) type = "社交打卡";
+    if(!typeMap[type]) typeMap[type] = { count:0, views:0, cr:0, collects:0, dms:0, leads:0 };
+    typeMap[type].count++;
+    typeMap[type].views += (+x.views||0);
+    typeMap[type].cr += (+x.completionRate||0);
+    typeMap[type].collects += (+x.collects||0);
+    typeMap[type].dms += (+x.dms||0);
+    typeMap[type].leads += (+x.leads||0);
+  });
+  const typeArr = Object.entries(typeMap).map(([k,v]) => ({
+    type:k, count:v.count, views:v.views, avgViews:Math.round(v.views/v.count),
+    avgCR:(v.cr/v.count).toFixed(1), collectRate:(v.collects/v.views*100).toFixed(1),
+    dms:v.dms, leads:v.leads, dmRate:(v.dms/v.views*100).toFixed(2)
+  })).sort((a,b) => b.avgViews - a.avgViews);
+  const bestType = typeArr[0];
+  const bestConversion = [...typeArr].sort((a,b) => (+b.dmRate) - (+a.dmRate))[0];
+
+  /* AI 洞察分析 */
+  const insightViewsDelta = bestType ? Math.round((bestType.avgViews / avgViews - 1) * 100) : 0;
+  const insightCollectDelta = bestType ? Math.round((+bestType.collectRate / +avgCollectRate - 1) * 100) : 0;
+  const insightCRDelta = bestType ? Math.round((+bestType.avgCR / +avgCR - 1) * 100) : 0;
+
+  /* AI 问题诊断 */
+  const problems = [];
+  if(lowCR.length > 0) {
+    const lowTitles = lowCR.map(x => x.videoTitle || x.title).join("、");
+    problems.push({
+      title: "部分视频前三秒留存下降",
+      analysis: `检测到 ${lowCR.length} 条视频完播率低于35%（${lowTitles}）。开场信息传递速度不足，用户进入观看状态较慢。建议优化前3秒钩子，用更强冲突或悬念开场。`,
+      level: "warn"
+    });
+  }
+  const lowEngagement = vids.filter(x => {
+    const rate = (+x.comments||0) / (+x.views||1) * 100;
+    return rate < 0.5;
+  });
+  if(lowEngagement.length > 0) {
+    problems.push({
+      title: "互动率下降",
+      analysis: `${lowEngagement.length} 条视频评论率低于0.5%，内容缺少互动引导。建议在结尾增加提问式CTA，如「评论区扣1」「你选哪个」等直接引导用户留言。`,
+      level: "warn"
+    });
+  }
+  const lowConversion = vids.filter(x => {
+    const rate = (+x.dms||0) / (+x.views||1) * 100;
+    return rate < 0.07;
+  });
+  if(lowConversion.length > 0 && problems.length < 2) {
+    problems.push({
+      title: "转化漏斗偏弱",
+      analysis: `${lowConversion.length} 条视频私信转化率低于0.07%，CTA引导力度不足。建议强化「私信领XX」类钩子，降低用户行动门槛。`,
+      level: "bad"
+    });
+  }
+  if(problems.length === 0) {
+    problems.push({
+      title: "暂无异常",
+      analysis: "当前所有视频数据指标均在健康范围内，建议继续保持当前内容策略。",
+      level: "good"
+    });
+  }
+
+  /* AI 评价 TOP 内容 */
+  function aiEvalVideo(v) {
+    const cr = +v.completionRate || 0;
+    const collectRate = (+v.collects||0) / (+v.views||1) * 100;
+    const dmRate = (+v.dms||0) / (+v.views||1) * 100;
+    const title = v.videoTitle || v.title || "";
+
+    let strengths = [], reasons = [], suggestions = [];
+    if(cr >= 40) { strengths.push("完播率高"); reasons.push("前3秒吸引力强，用户停留意愿高"); }
+    else if(cr >= 35) { strengths.push("完播率达标"); reasons.push("开场能抓住注意力"); }
+    else { strengths.push("播放量尚可"); reasons.push("标题有点击力，但内容节奏需优化"); }
+
+    if(collectRate >= 1.5) { strengths.push("收藏率突出"); reasons.push("内容被用户当作参考工具，实用价值高"); }
+    if(dmRate >= 0.08) { strengths.push("转化效率好"); reasons.push("CTA引导明确，用户行动意愿强"); }
+
+    if(/深蹲|硬拉|卧推|纠错|动作/.test(title)) suggestions.push("继续制作同类型动作教学系列");
+    else if(/减脂|碎片|爬坡/.test(title)) suggestions.push("拓展减脂相关系列内容");
+    else if(/办卡|年卡|特价|避坑/.test(title)) suggestions.push("定期发利益驱动型内容配合活动");
+    else if(/私教|教练|课程/.test(title)) suggestions.push("围绕私教价值做争议性话题");
+    else suggestions.push("保持当前内容方向持续产出");
+
+    if(cr < 35) suggestions.push("压缩说理环节，增加画面切换频率");
+    if(collectRate < 1) suggestions.push("增加干货密度，提升收藏价值");
+
+    const level = (cr >= 40 && collectRate >= 1) ? "good" : (cr >= 35 ? "warn" : "bad");
+    const levelText = level === "good" ? "该视频表现优秀" : (level === "warn" ? "该视频表现良好" : "该视频表现需优化");
+
+    return { strengths, reasons, suggestions, level, levelText };
+  }
+
+  /* 构建 HTML */
+  let html = `<div class="ai-stats-grid">
+    <div class="ai-stat-box"><div class="ai-sv">${sumViews.toLocaleString()}</div><div class="ai-sl">总播放量</div></div>
+    <div class="ai-stat-box"><div class="ai-sv">${avgCR}%</div><div class="ai-sl">平均完播率</div></div>
+    <div class="ai-stat-box"><div class="ai-sv">${avgLikeRate}%</div><div class="ai-sl">平均点赞率</div></div>
+    <div class="ai-stat-box"><div class="ai-sv">${avgCollectRate}%</div><div class="ai-sl">平均收藏率</div></div>
+    <div class="ai-stat-box"><div class="ai-sv">${totalDMs}</div><div class="ai-sl">总私信咨询</div></div>
+    <div class="ai-stat-box"><div class="ai-sv">${totalCard + totalCourse}</div><div class="ai-sl">总成交</div></div>
+  </div>`;
+
+  /* AI 运营洞察 */
+  html += `<div class="ai-section">
+    <div class="ai-card">
+      <div class="ai-head">
+        <div class="ai-ic">${icon("activity",18)}</div>
+        <h3>AI运营洞察</h3>
+        <span class="ai-badge">AI Insight</span>
+      </div>
+      <div class="ai-body">
+        本期账号增长主要来自：<strong>${bestType ? bestType.type : "综合"}</strong>系列内容
+        <div class="ai-quote">
+          <strong>分析依据：</strong>
+          <ul>
+            <li>平均播放量 <strong>${bestType ? bestType.avgViews.toLocaleString() : avgViews.toLocaleString()}</strong>，高于账号平均值 <span class="ai-tag up">+${insightViewsDelta}%</span></li>
+            <li>收藏率提升 <span class="ai-tag up">+${insightCollectDelta}%</span>，用户保存意愿增强</li>
+            <li>完播率提升 <span class="ai-tag ${insightCRDelta>=0?'up':'down'}">${insightCRDelta>=0?'+':''}${insightCRDelta}%</span></li>
+          </ul>
+        </div>
+        <strong>AI判断：</strong>用户更偏好「${bestType ? bestType.type : "综合"}」类型内容，${bestConversion && bestConversion.type !== bestType.type ? `但转化效率最高的是「${bestConversion.type}」类型（私信率${bestConversion.dmRate}%）` : "兼具流量与转化能力"}。
+        <div class="ai-judge ${insightViewsDelta > 0 ? 'good' : 'warn'}">
+          ${insightViewsDelta > 0 ? `「${bestType.type}」内容表现优于均值${insightViewsDelta}%，建议加大此类内容投入比例。` : "各类型内容表现接近，建议均衡布局。"}
+        </div>
+      </div>
+    </div>`;
+
+  /* AI 问题诊断 */
+  html += `<div class="ai-card">
+    <div class="ai-head">
+      <div class="ai-ic">${icon("flame",18)}</div>
+      <h3>AI问题诊断</h3>
+      <span class="ai-badge">AI Diagnosis</span>
+    </div>
+    <div class="ai-body">`;
+  problems.forEach((p, i) => {
+    html += `<div style="margin-bottom:${i < problems.length-1 ? '14px' : '0'}">
+      <strong>问题${i+1}：${esc(p.title)}</strong>
+      <div class="ai-judge ${p.level}">${esc(p.analysis)}</div>
+    </div>`;
+  });
+  html += `</div></div></div>`;
+
+  /* AI 行动建议 */
+  html += `<div class="ai-section full">
+    <div class="ai-card">
+      <div class="ai-head">
+        <div class="ai-ic">${icon("target",18)}</div>
+        <h3>AI行动建议</h3>
+        <span class="ai-badge">AI Action</span>
+      </div>
+      <div class="ai-body">
+        <div class="ai-action">
+          <div class="ai-act-txt">制作3条<strong>${bestType ? bestType.type : "减脂训练"}</strong>系列内容，延续高播放量表现</div>
+          <button class="ai-btn" data-ai-go="topic">生成选题</button>
+        </div>
+        <div class="ai-action">
+          <div class="ai-act-txt">优化低表现视频结构，${lowCR.length > 0 ? `重点优化${lowCR.length}条完播率偏低视频` : "压缩说理环节增加画面切换"}</div>
+          <button class="ai-btn" data-ai-go="analytics">查看视频分析</button>
+        </div>
+        <div class="ai-action">
+          <div class="ai-act-txt">提升转化型内容比例，当前私信率${(totalDMs/sumViews*100).toFixed(2)}%${(totalDMs/sumViews*100) < 0.08 ? "，低于0.08%基准线" : "，表现健康"}</div>
+          <button class="ai-btn" data-ai-go="goals">调整运营目标</button>
+        </div>
+        <div class="ai-action">
+          <div class="ai-act-txt">${bestConversion && bestConversion.type !== bestType.type ? `增加「${bestConversion.type}」类型内容以提升转化效率` : "保持当前内容策略持续产出"}</div>
+          <button class="ai-btn" data-ai-go="script">生成脚本</button>
+        </div>
+      </div>
+    </div>
+  </div>`;
+
+  /* 内容表现 TOP 榜 */
+  html += `<div class="ai-section full">
+    <div class="ai-card">
+      <div class="ai-head">
+        <div class="ai-ic">${icon("chart",18)}</div>
+        <h3>内容表现分析 TOP ${top3.length}</h3>
+        <span class="ai-badge">AI Evaluation</span>
+      </div>
+      <div class="ai-body">`;
+  top3.forEach((v, i) => {
+    const ev = aiEvalVideo(v);
+    const title = v.videoTitle || v.title || "";
+    const platform = v.platform || "";
+    html += `<div class="ai-top-row">
+      <div class="ai-rank r${i+1}">${i+1}</div>
+      <div class="ai-info">
+        <div class="ai-t">${esc(title)}</div>
+        <div class="ai-s">${esc(platform)} · 完播${v.completionRate}% · 收藏${v.collects}</div>
+      </div>
+      <div class="ai-nums">
+        <div class="ai-n">${(+v.views).toLocaleString()}</div>
+        <div class="ai-l">播放量</div>
+      </div>
+    </div>
+    <div class="ai-eval">
+      <div class="ai-eval-row"><span class="ai-eval-k">AI评价</span><span class="ai-tag ${ev.level==='good'?'up':ev.level==='warn'?'neutral':'down'}">${ev.levelText}</span></div>
+      <div class="ai-eval-row"><span class="ai-eval-k">优势</span><span>${ev.strengths.join("、")}</span></div>
+      <div class="ai-eval-row"><span class="ai-eval-k">原因</span><span>${ev.reasons.join("；")}</span></div>
+      <div class="ai-eval-row"><span class="ai-eval-k">优化建议</span><span>${ev.suggestions.join("；")}</span></div>
+    </div>`;
+  });
+  html += `</div></div></div>`;
+
+  return html;
+}
+
 /* ---------- MODULE VIEW ---------- */
 function renderModule(key){
   const m=modOf(key); const all=data[key]||[];
@@ -2015,7 +2370,11 @@ function renderModule(key){
     head=headHero(m, `${p.value}%`, `平均进度 · ${all.length} 项`);
   } else if(m.type==="note"){
     const todayN=all.filter(x=>x.date===t).length;
-    head=headHero(m, `${all.length}`, `条记录 · 今日 ${todayN} 条`, null);
+    if(key==="analytics") {
+      head=headHero(m, `${all.length}`, `条视频数据 · 今日 ${todayN} 条`, null);
+    } else {
+      head=headHero(m, `${all.length}`, `条记录 · 今日 ${todayN} 条`, null);
+    }
   }
 
   const body = it.length ? it.map(x=>recHTML(m,x,sel.has(x.id))).join("")
@@ -2045,6 +2404,7 @@ function renderModule(key){
       <div class="spacer"></div><button class="btn" id="btn-new">${icon("plus",16,2.2)}新建</button></div>
     ${filterHTML}
     ${head}
+    ${key==="analytics" ? renderAISection(all) : ""}
     ${batchBar}
     <div class="mod-layout">
       <div class="mod-main">
@@ -2073,6 +2433,9 @@ function renderModule(key){
   wireSideStats(key);
   $("#btn-new").onclick=()=>openEditor(key,null);
   wireBatchActions(key);
+  $("#screen").querySelectorAll("[data-ai-go]").forEach(btn=>{
+    btn.onclick=()=>go(btn.dataset.aiGo);
+  });
   wireModule(key);
 }
 
@@ -2248,6 +2611,46 @@ function sideStats(m, all){
         <div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">
         <div style="font-size:11px;color:var(--text-tertiary);margin-bottom:6px">按状态分布</div>
         <div class="topic-funnel">${statusRows||'<div style="color:var(--text-tertiary);font-size:12.5px">暂无数据</div>'}</div></div></div>`;
+  }
+
+  // analytics 专属侧栏：平台分布 + 转化漏斗
+  if(m.key==="analytics"){
+    const vids = all.filter(x => x.views && +x.views > 0);
+    const sumViews = vids.reduce((a,x) => a + (+x.views||0), 0);
+    const totalDMs = vids.reduce((a,x) => a + (+x.dms||0), 0);
+    const totalLeads = vids.reduce((a,x) => a + (+x.leads||0), 0);
+    const totalCard = vids.reduce((a,x) => a + (+x.cardSold||0), 0);
+    const totalCourse = vids.reduce((a,x) => a + (+x.courseSold||0), 0);
+    const totalSales = totalCard + totalCourse;
+    const dmRate = sumViews ? (totalDMs / sumViews * 100).toFixed(2) : "0";
+    const leadRate = totalDMs ? (totalLeads / totalDMs * 100).toFixed(0) : "0";
+    const saleRate = totalLeads ? (totalSales / totalLeads * 100).toFixed(0) : "0";
+
+    const byPlatform = {};
+    vids.forEach(x => { const p = x.platform || "未知"; if(!byPlatform[p]) byPlatform[p] = {count:0,views:0}; byPlatform[p].count++; byPlatform[p].views += (+x.views||0); });
+    const platforms = Object.entries(byPlatform).sort((a,b) => b[1].views - a[1].views);
+    const maxPV = platforms.length ? platforms[0][1].views : 1;
+    const platBars = platforms.length ? platforms.map((c,i) => {
+      const dot = palette[i % palette.length];
+      return `<div class="cbrow js-stat-filter" data-filter="${esc(c[0])}"><span class="cbn">${esc(c[0])}</span><span class="cbt"><i style="width:${Math.round(c[1].views/maxPV*100)}%;background:${dot}"></i></span><span class="cbv">${c[1].count}条</span></div>`;
+    }).join("") : `<div style="color:var(--text-tertiary);font-size:12.5px;padding:6px 0">暂无数据</div>`;
+
+    const funnel = (label, from, to, rateStr) => `<div class="funnel-row"><span class="fr-label">${label}</span><span class="fr-bar"><i style="width:${from > 0 ? Math.round(to/from*100) : 0}%;background:var(--accent)"></i></span><span class="fr-val">${to}</span></div>`;
+
+    return `<div class="side-card"><div class="sh">${icon("chart",15)} 平台分布 · 点击筛选</div>
+      <div class="catbar">${platBars}</div>
+      ${row("视频总数",`${vids.length} 条`)}
+      ${row("总播放量",`${sumViews.toLocaleString()}`)}</div>
+    <div class="side-card"><div class="sh">${icon("target",15)} 转化漏斗</div>
+      <div class="topic-funnel">
+        ${funnel("播放量", sumViews, sumViews, "100%")}
+        ${funnel("私信咨询", sumViews, totalDMs, dmRate + "%")}
+        ${funnel("线索转化", totalDMs, totalLeads, leadRate + "%")}
+        ${funnel("成交合计", totalLeads, totalSales, saleRate + "%")}
+      </div>
+      ${row("私信率",`${dmRate}%`)}
+      ${row("健身卡成交",`${totalCard} 单`)}
+      ${row("课程成交",`${totalCourse} 单`)}</div>`;
   }
 
   const todayN=all.filter(x=>x.date===t).length;
@@ -2817,7 +3220,10 @@ function showToast(msg){
 
 /* ---------- router / sidebar ---------- */
 function dateStr(){ const n=new Date(); const wd="日一二三四五六"[n.getDay()]; return `${n.getFullYear()}年${n.getMonth()+1}月${n.getDate()}日 周${wd}`; }
-function go(v){ view=v; searchQ=""; batchSelected={}; filterFrom=""; filterTo=""; filterCat=""; renderNavActive(); render(); window.scrollTo({top:0}); }
+function go(v, skipHistory){
+  if(!skipHistory) viewHistory.push({view: view, homeMode: homeMode, expandModuleKey: expandModuleKey});
+  view=v; searchQ=""; batchSelected={}; filterFrom=""; filterTo=""; filterCat=""; renderNavActive(); render(); window.scrollTo({top:0});
+}
 function render(){ if(view==="home") renderHome(); else if(view==="insight") renderInsight(); else if(view==="schedule") renderSchedule(); else renderModule(view); }
 
 function buildNav(){
@@ -3443,6 +3849,26 @@ function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   try { localStorage.setItem('gym-theme', theme); } catch(e) {}
 }
+
+/* ESC 快捷键：返回上一步 */
+document.addEventListener("keydown", (e) => {
+  if(e.key !== "Escape") return;
+  const overlay = document.querySelector(".overlay");
+  if(overlay) { overlay.remove(); return; }
+  const toast = document.getElementById("toast");
+  if(toast) { toast.remove(); return; }
+  if(viewHistory.length === 0) return;
+  const prev = viewHistory.pop();
+  view = prev.view;
+  homeMode = prev.homeMode || "ring";
+  expandModuleKey = prev.expandModuleKey || null;
+  searchQ = "";
+  batchSelected = {};
+  filterFrom = ""; filterTo = ""; filterCat = "";
+  renderNavActive();
+  render();
+  window.scrollTo({top:0});
+});
 
 buildNav();
 render();
